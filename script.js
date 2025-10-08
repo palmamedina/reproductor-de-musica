@@ -88,7 +88,7 @@ function playSong (id, start = true) {
   audio.src = song.src;
   audio.title = song.title;
 
-  if (!userData.currentSong) {
+  if (userData.currentSong === null || start) {
     audio.currentTime = 0;
   }else {
     audio.currentTime = userData.songCurrentTime;
