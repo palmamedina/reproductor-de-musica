@@ -82,5 +82,5 @@ const userData = {
   songCurrentTime: 0
 }
 function playSong(id) {
-  
+  const song = userData.songs.find((song) => song.id === id);
 }
