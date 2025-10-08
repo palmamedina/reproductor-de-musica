@@ -75,6 +75,7 @@ const allSongs = [
     src: "https://cdn.freecodecamp.org/curriculum/js-music-player/chasing-that-feeling.mp3",
   },
 ]
+
 const audio = new Audio();
 const userData = {
   songs: allSongs,
@@ -102,6 +103,11 @@ function pauseSong() {
   userData.songCurrentTime = audio.currentTime;
   playButton.classList.remove('playing');
   audio.pause();
+}
+
+function getNextSong() {
+  const currentIndex = getCurrentSongIndex();
+  return userData.songs[currentIndex + 1];
 }
 
 function getCurrentSongIndex() {
