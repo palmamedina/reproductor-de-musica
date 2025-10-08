@@ -83,7 +83,7 @@ const userData = {
   songCurrentTime: 0
 }
 
-function playSong(id) {
+function playSong (id, start = true) {
   const song = userData.songs.find((song) => song.id === id);
   audio.src = song.src;
   audio.title = song.title;
@@ -166,3 +166,4 @@ songs.forEach((song) => {
 
 pauseButton.addEventListener("click", pauseSong);
 nextButton.addEventListener("click", playNextSong);
+previousButton.addEventListener("click", playPreviousSong);
