@@ -97,6 +97,8 @@ function playSong(id) {
   audio.play();
 }
 
-playButton.addEventListener("click", function() {
-  playSong(0);
+playButton.addEventListener("click", () => {
+  if (userData.currentSong === null) {
+    playSong(userData.songs[0].id);
+  }
 });
