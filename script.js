@@ -113,7 +113,15 @@ function getNextSong() {
 function playNextSong() {
   if (userData.currentSong === null) {
     playSong(userData.songs[0].id);
-  }
+  }else {
+    const nextSong = getNextSong();
+    if (nextSong !== undefined) {
+      playSong(nextSong.id);
+    } else {
+      userData.currentSong = null;
+      userData.songCurrentTime = 0;
+      pauseSong();
+    }
 }
 
 function getCurrentSongIndex() {
