@@ -121,3 +121,5 @@ songs.forEach((song) => {
     playSong(songId);
   });
 });
+
+pauseButton.addEventListener("click", pauseSong);
