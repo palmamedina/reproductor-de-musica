@@ -100,6 +100,8 @@ function playSong(id) {
 
 function pauseSong() {
   userData.songCurrentTime = audio.currentTime;
+  playButton.classList.remove('playing');
+  audio.pause();
 }
 
 playButton.addEventListener("click", () => {
