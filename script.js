@@ -96,3 +96,7 @@ function playSong(id) {
   userData.currentSong = song;
   audio.play();
 }
+
+playButton.addEventListener("click", function() {
+  playSong(0);
+});
