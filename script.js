@@ -81,3 +81,6 @@ const userData = {
   currentSong: null,
   songCurrentTime: 0
 }
+function playSong(id) {
+  
+}
