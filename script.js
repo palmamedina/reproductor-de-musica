@@ -81,6 +81,7 @@ const userData = {
   currentSong: null,
   songCurrentTime: 0
 }
+
 function playSong(id) {
   const song = userData.songs.find((song) => song.id === id);
   audio.src = song.src;
@@ -95,6 +96,10 @@ function playSong(id) {
   playButton.classList.add('playing');
   userData.currentSong = song;
   audio.play();
+}
+
+function pauseSong() {
+  userData.songCurrentTime = audio.currentTime;
 }
 
 playButton.addEventListener("click", () => {
