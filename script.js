@@ -110,6 +110,11 @@ function getNextSong() {
   return userData.songs[currentIndex + 1];
 }
 
+function getPreviousSong() {
+  const currentIndex = getCurrentSongIndex();
+  return userData.songs[currentIndex - 1];
+}
+
 function playNextSong() {
   if (userData.currentSong === null) {
     playSong(userData.songs[0].id);
@@ -122,6 +127,7 @@ function playNextSong() {
       userData.songCurrentTime = 0;
       pauseSong();
     }
+}
 }
 
 function getCurrentSongIndex() {
@@ -150,3 +156,4 @@ songs.forEach((song) => {
 });
 
 pauseButton.addEventListener("click", pauseSong);
+nextButton.addEventListener("click", playNextSong);
