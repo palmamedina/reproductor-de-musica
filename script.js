@@ -110,6 +110,12 @@ function getNextSong() {
   return userData.songs[currentIndex + 1];
 }
 
+function playNextSong() {
+  if (userData.currentSong === null) {
+    playSong(userData.songs[0].id);
+  }
+}
+
 function getCurrentSongIndex() {
   if (userData.currentSong === null) {
     return -1;
