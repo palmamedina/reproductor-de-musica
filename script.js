@@ -104,6 +104,13 @@ function pauseSong() {
   audio.pause();
 }
 
+function getCurrentSongIndex() {
+  if (userData.currentSong === null) {
+    return -1;
+  }
+  return userData.songs.indexOf(userData.currentSong);
+}
+
 playButton.addEventListener("click", () => {
   if (userData.currentSong === null) {
     playSong(userData.songs[0].id);
