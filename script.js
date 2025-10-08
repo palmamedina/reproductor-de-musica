@@ -91,4 +91,8 @@ function playSong(id) {
   }else {
     audio.currentTime = userData.songCurrentTime;
   }
+
+  playButton.classList.add('playing');
+  userData.currentSong = song;
+  audio.play();
 }
