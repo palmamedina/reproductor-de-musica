@@ -108,5 +108,9 @@ playButton.addEventListener("click", () => {
 const songs = document.querySelectorAll('.playlist-song');
 
 songs.forEach((song) => {
-  
+   const button = song.querySelector('button');
+  button.addEventListener('click', () => {
+    const songId = Number(song.id.split('-')[1]);
+    playSong(songId);
+  });
 });
