@@ -130,6 +130,15 @@ function playNextSong() {
 }
 }
 
+function playPreviousSong() {
+  const previousSong = getPreviousSong();
+  if (previousSong === undefined) {
+    playSong(userData.songs[0].id);
+  } else {
+    playSong(previousSong.id);
+  }
+}
+
 function getCurrentSongIndex() {
   if (userData.currentSong === null) {
     return -1;
