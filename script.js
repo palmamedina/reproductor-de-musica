@@ -3,6 +3,8 @@ const playButton = document.getElementById('play');
 const pauseButton = document.getElementById('pause');
 const nextButton = document.getElementById('next');
 const previousButton = document.getElementById('previous');
+const playingSong = document.getElementById("player-song-title");
+const songArtist = document.getElementById("player-song-artist");
 const allSongs = [
   {
     id: 0,
