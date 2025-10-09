@@ -133,6 +133,11 @@ function playNextSong() {
 }
 }
 
+function setPlayerDisplay() {
+  playingSong.textContent = userData.currentSong?.title || "";
+  songArtist.textContent = userData.currentSong?.artist || "";
+}
+
 function highlightCurrentSong() {
   const currentHighlighted = document.querySelector('.playlist-song[aria-current="true"]');
   if (currentHighlighted) {
