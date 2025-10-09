@@ -130,6 +130,13 @@ function playNextSong() {
 }
 }
 
+function highlightCurrentSong() {
+  const currentHighlighted = document.querySelector('.playlist-song[aria-current="true"]');
+  if (currentHighlighted) {
+    currentHighlighted.removeAttribute('aria-current');
+  }
+}
+
 function playPreviousSong() {
     if (userData.currentSong === null) {
     return;
