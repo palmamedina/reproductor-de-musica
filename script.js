@@ -170,6 +170,14 @@ function getCurrentSongIndex() {
   return userData.songs.indexOf(userData.currentSong);
 }
 
+function setPlayButtonAccessibleText() {
+  if (userData.currentSong) {
+    playButton.setAttribute("aria-label", `Play ${userData.currentSong.title}`);
+  } else {
+    playButton.setAttribute("aria-label", "Play");
+  }
+}
+
 playButton.addEventListener("click", () => {
   if (userData.currentSong === null) {
     playSong(userData.songs[0].id);
