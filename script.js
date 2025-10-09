@@ -136,6 +136,9 @@ function highlightCurrentSong() {
     currentHighlighted.removeAttribute('aria-current');
   }
   const songToHighlight = document.getElementById(`song-${userData.currentSong?.id}`);
+  if (songToHighlight) {
+    songToHighlight.setAttribute("aria-current", "true");
+  }
 }
 
 function playPreviousSong() {
