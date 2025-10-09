@@ -131,6 +131,9 @@ function playNextSong() {
 }
 
 function playPreviousSong() {
+    if (userData.currentSong === null) {
+    return;
+  }
   const previousSong = getPreviousSong();
   if (previousSong === undefined) {
     playSong(userData.songs[0].id);
