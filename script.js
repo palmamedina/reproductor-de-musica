@@ -102,6 +102,7 @@ function playSong (id, start = true) {
 function pauseSong() {
   userData.songCurrentTime = audio.currentTime;
   playButton.classList.remove('playing');
+  highlightCurrentSong();
   audio.pause();
 }
 
